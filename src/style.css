@@ -3,6 +3,7 @@
   --secondary-dark-color: #272727;
   --white-color: #FFF;
   --black-color: #000;
+  --gray-color: #959595;
   --hover-color: #3f3f3f;
   --error-color: #B00020;
 }
@@ -99,4 +100,9 @@ input , button {
 #tasks-list li {
   padding: 10px;
   word-break: break-all;
+}
+
+.task-completed {
+  color: var(--gray-color);
+  text-decoration: line-through;
 }

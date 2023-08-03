@@ -33,12 +33,24 @@ function validateInput(taskText) {
   return true;
 }
 
+function toggleTaskCompleted(index) {
+  storageTasks[index].completed = !storageTasks[index].completed;
+  updateLocalStorage();
+  window.location.reload();
+}
+
 function renderTasks() {
   tasksList.innerHTML = '';
 
-  storageTasks.forEach((task) => {
+  storageTasks.forEach((task, index) => {
     const taskElement = document.createElement('li');
     taskElement.textContent = task.text;
+
+    if (task.completed) {
+      taskElement.classList.add('task-completed');
+    }
+
+    taskElement.addEventListener('dblclick', () => toggleTaskCompleted(index));
 
     tasksList.appendChild(taskElement);
   });
@@ -49,7 +61,7 @@ function createTask() {
 
   if (!validateInput(taskText)) return;
 
-  storageTasks.push({ text: taskText });
+  storageTasks.push({ text: taskText, completed: false });
   taskTextInput.value = '';
   clearErrorMessage();
   updateLocalStorage();
