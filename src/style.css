@@ -28,7 +28,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 header{
@@ -50,7 +50,7 @@ input , button {
 
 #inputs {
   display: flex;
-  max-width: 22.125rem;
+  max-width: 20.125rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -85,24 +85,78 @@ input , button {
   transition: 250ms;
 }
 
+#content {
+  min-width: 20.125rem;
+  max-width: 40.25rem;
+}
+
 #tasks-list {
   display: flex;
-  max-width: 50vw;
+  max-width: 40.25rem;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   color: var(--white-color);
   font-size: 1.4rem;
-  gap: 1rem;
+  gap: 2rem;
   list-style: none;
   text-transform: capitalize;
 }
 
 #tasks-list li {
-  padding: 10px;
-  word-break: break-all;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 4rem;
+  word-break: normal;
 }
 
 .task-completed {
   color: var(--gray-color);
   text-decoration: line-through;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+img {
+  width: 1rem;
+  height: 1rem;
+}
+
+#up-btn , #down-btn, #remove-btn {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--secondary-dark-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#up-btn:hover , #down-btn:hover, #remove-btn:hover {
+  background-color: var(--hover-color);
+  transition: 250ms;
+}
+
+@media only screen and (width <= 600px) {
+  #content, #inputs {
+    max-width: 20.125rem;
+  }
+}
+
+@media only screen and (width <= 400px) {
+  #content, #inputs {
+    min-width: 80%;
+    max-width: 80%;
+  }
+
+  #tasks-list li {
+    gap: 2rem;
+  }
 }

@@ -39,6 +39,55 @@ function toggleTaskCompleted(index) {
   window.location.reload();
 }
 
+function swapTasks(indexA, indexB) {
+  const temp = storageTasks[indexA];
+  storageTasks[indexA] = storageTasks[indexB];
+  storageTasks[indexB] = temp;
+}
+
+function moveTask(direction, index) {
+  const newIndex = direction === 'up' ? index - 1 : index + 1;
+  swapTasks(index, newIndex);
+  updateLocalStorage();
+  window.location.reload();
+}
+
+function deleteTask(index) {
+  storageTasks.splice(index, 1);
+  updateLocalStorage();
+  window.location.reload();
+}
+
+function createButton(id, iconSrc, clickHandler) {
+  const button = document.createElement('button');
+  button.id = id;
+  const icon = document.createElement('img');
+  icon.src = iconSrc;
+  button.appendChild(icon);
+  button.addEventListener('click', clickHandler);
+  return button;
+}
+
+function createButtonsContainer(index) {
+  const buttonsContainer = document.createElement('div');
+  buttonsContainer.classList.add('buttons-container');
+
+  if (index > 0) {
+    const upBtn = createButton('up-btn', './assets/up.svg', () => moveTask('up', index));
+    buttonsContainer.appendChild(upBtn);
+  }
+
+  if (index < storageTasks.length - 1) {
+    const downBtn = createButton('down-btn', './assets/down.svg', () => moveTask('down', index));
+    buttonsContainer.appendChild(downBtn);
+  }
+
+  const deleteBtn = createButton('remove-btn', './assets/trash.svg', () => deleteTask(index));
+  buttonsContainer.appendChild(deleteBtn);
+
+  return buttonsContainer;
+}
+
 function renderTasks() {
   tasksList.innerHTML = '';
 
@@ -52,6 +101,8 @@ function renderTasks() {
 
     taskElement.addEventListener('dblclick', () => toggleTaskCompleted(index));
 
+    const buttonsContainer = createButtonsContainer(index);
+    taskElement.appendChild(buttonsContainer);
     tasksList.appendChild(taskElement);
   });
 }
