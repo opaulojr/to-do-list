@@ -3,6 +3,7 @@
   --secondary-dark-color: #272727;
   --white-color: #FFF;
   --black-color: #000;
+  --hover-color: #3f3f3f;
 }
 
 * {
@@ -69,4 +70,26 @@ input , button {
   background-color: var(--secondary-dark-color);
   cursor: pointer;
   font-size: 2rem;
+}
+
+#add-task-btn:hover {
+  background-color: var(--hover-color);
+  transition: 250ms;
+}
+
+#tasks-list {
+  display: flex;
+  max-width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white-color);
+  font-size: 1.4rem;
+  gap: 1rem;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+#tasks-list li {
+  padding: 10px;
+  word-break: break-all;
 }
