@@ -2,9 +2,12 @@
 
 Este é o meu 6º projeto durante minha jornada na Trybe!
 
+To Do list é um app simples que permite os usuários criarem e manipularem suas tarefas em uma lista. Este é um side-project para continuar aprimorando minhas habilidades em HTML, CSS e JavaScript.
+
 ## Estrutura do Repositório
 
 - A pasta `src` contém todo o código;
+- A pasta `src/assets` contém as imagens usadas no projeto;
 
 ## Funcionalidades Implementadas
 
