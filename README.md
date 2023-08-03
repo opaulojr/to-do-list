@@ -27,6 +27,8 @@ Este é o meu 6º projeto durante minha jornada na Trybe!
 
 - A pagina possui uma `div` com o `id` `content`, dentro dessa `div` há uma lista do tipo `ol` com o `id` `tasks-list`;
 - Ao usuário inserir um texto no input `task-text-input` e pressionar **ENTER** ou clicar no botão `add-task-btn`, é criada a chave `tasks` no **localStorage** no formato `[{"text":"texto inserido pelo usuário"}]`;
-- Para cada objeto presente no **localStorage** é criado um elemento `li` dentro de `tasks-list`, ou seja, renderizando as tarefas que o usuário inseriu;
+- Para cada objeto presente no **localStorage** é criado um elemento `li` dentro de `tasks-list`, ou seja, renderizando as tarefas que o usuário inseriu na ordem que foram criadas;
+- Ao tentar inserir uma nova tarefa sem nenhum carácter, é exibido um erro abaixo do input `task-text-input` com o texto **Type something!**;
+- Ao tentar inserir uma tarefa que já existe, é exibido um erro abaixo do input `task-text-input` com o texto **This task already exist**;
 
 </details>

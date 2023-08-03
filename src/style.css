@@ -4,6 +4,7 @@
   --white-color: #FFF;
   --black-color: #000;
   --hover-color: #3f3f3f;
+  --error-color: #B00020;
 }
 
 * {
@@ -48,6 +49,7 @@ input , button {
 
 #inputs {
   display: flex;
+  max-width: 22.125rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -61,6 +63,11 @@ input , button {
   background-color: var(--white-color);
   color: var(--black-color);
   font-size: 1rem;
+}
+
+#error-message {
+  display: none;
+  color: var(--error-color);
 }
 
 #add-task-btn {
