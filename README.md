@@ -47,9 +47,11 @@ Este é o meu 6º projeto durante minha jornada na Trybe!
 
 <details><summary><strong>As tarefas podem ser movidas para cima e para baixo e serem removidas</strong></summary><br />
 
-- Na renderização das tarefas, é criado uma div com a classe `buttons-container` dentro de cada `li`;
+- Na renderização da lista de tarefas, é criado uma div com a classe `buttons-container` dentro de cada `li`;
 - A div `buttons-container` possui 3 botões, `up-btn` `down-btn` e `remove-btn`;
 - O botão `up-btn` move a tarefa para cima, `down-btn` move a tarefa para baixo e `remove-btn` deleta a tarefa;
 - O botão `up-btn` não é renderizado no primeiro elemento da lista e o botão `down-btn` não é renderizado no ultimo elemento da lista;
 
 </details>
+
+---
