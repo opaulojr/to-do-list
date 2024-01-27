@@ -1,60 +1,88 @@
-# Projeto To Do List
+# To Do List Project
 
-Este é o meu 6º projeto durante minha jornada na Trybe!
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-To Do list é um app simples que permite os usuários criarem e manipularem suas tarefas em uma lista. Este é um side-project para continuar aprimorando minhas habilidades em HTML, CSS e JavaScript.
+## Link
 
-## Estrutura do Repositório
+[to-do-list.vercel](https://paulo-to-do-list.vercel.app/)
 
-- A pasta `src` contém todo o código;
-- A pasta `src/assets` contém as imagens usadas no projeto;
+![Preview of To Do List Project](./to-do-list.png)
 
-## Funcionalidades Implementadas
+## About
 
-## Criado um input e um botão na página
+This is my 6th project during my journey at Trybe!
+
+To Do list is a simple app that allows users to create and manipulate their tasks in a list. This is a side-project to continue improving my skills in HTML, CSS, and JavaScript.
+
+## Repository Structure
+
+- The `src` folder contains all the code
+
+- The `src/assets` folder contains the images used in the project
+
+## Implemented Features
+
+## Created an input and a button on the page
 
 <details>
-<summary><strong>Foi criado um input de texto e um botão que serão usados para a criação das tasks</strong></summary><br />
+  <summary>
+    <strong>An input text and a button have been created to be used for task creation</strong>
+  </summary> <br />
 
-- A pagina possui uma tag `header` que possui um elemento `h1` com o `id` `title`;
-- O elemento `title` possui o texto **My To Do List**;
-- A pagina possui um `input` do tipo `text` com o `id` `task-text-input`;
-- A pagina possui um `button` com o `id` `add-task-btn`;
+- The page has an input with the `id` named `task-text-input` where the user can enter the text
 
+- The page has a button with the `id` named `add-task-btn` which is responsible for adding the task to the list
 </details>
 
-## Implementado a criação e exibição de tarefas na página
+
+## Implemented task creation and display on the page
 
 <details>
-<summary><strong>Implementado a função de criar uma nova tarefa e exibi-la na página</strong></summary><br />
+  <summary>
+    <strong>Implemented the function to create a new task and display it on the page</strong>
+  </summary> <br />
 
-- A pagina possui uma `div` com o `id` `content`, dentro dessa `div` há uma lista do tipo `ol` com o `id` `tasks-list`;
-- Ao usuário inserir um texto no input `task-text-input` e pressionar **ENTER** ou clicar no botão `add-task-btn`, é criada a chave `tasks` no **localStorage** no formato `[{"text":"texto inserido pelo usuário", "completed": false}]`;
-- Para cada objeto presente no **localStorage** é criado um elemento `li` dentro de `tasks-list`, ou seja, renderizando as tarefas que o usuário inseriu na ordem que foram criadas;
-- Ao tentar inserir uma nova tarefa sem nenhum carácter, é exibido um erro abaixo do input `task-text-input` com o texto **Type something!**;
-- Ao tentar inserir uma tarefa que já existe, é exibido um erro abaixo do input `task-text-input` com o texto **This task already exist**;
+- The page has a `div` with the `id` named `content`, inside which there is an ordered list (`ol`) with the `id` named `tasks-list`
 
+- When the user enters text in the `task-text-input` and presses **ENTER** or clicks the `add-task-btn`, a **tasks** key is created in the **localStorage** in the format `[{"text":"user-entered text", "completed": false}]`
+
+- For each object present in the **localStorage**, an `li` element is created inside `tasks-list`, rendering the tasks that the user entered in the order they were created
+
+- When attempting to enter a new task without any characters, an error is displayed below the `task-text-input` with the text **Type something!**
+
+- When attempting to enter a task that already exists, an error is displayed below the `task-text-input` with the text **This task already exists**
 </details>
 
-## Implementado a função de marcar uma tarefa como feita
 
-<details><summary><strong>Ao clicar duas vezes em uma tarefa ela é marcada como feita</strong></summary><br />
+## Implemented the function to mark a task as done
 
-- As tarefas são criadas com a propriedade `completed` com o valor **false** dentro do **localStorage** e sem a classe `task-completed`;
-- Após uma tarefa receber um clique duplo ela passa a ter a classe `task-completed` e a propriedade `completed` é alterada para **true** dentro do **localStorage**;
-- Após uma tarefa receber um segundo duplo clique, a classe `task-completed` é removida e o valor de `completed` volta a ser **false**;
+<details>
+  <summary>
+    <strong>By double-clicking on a task, it is marked as done</strong>
+  </summary> <br />
 
+- Tasks are created with the `completed` property set to **false** within the **localStorage** and without the `task-completed` class
+
+- After a task receives a double-click, it gains the `task-completed` class, and the `completed` property is changed to **true** within the **localStorage**
+
+- After a task receives a second double-click, the `task-completed` class is removed, and the value of `completed` reverts to **false**
 </details>
 
-## Implementado as funções de mover e remover as tarefas
 
-<details><summary><strong>As tarefas podem ser movidas para cima e para baixo e serem removidas</strong></summary><br />
+## Implemented functions to move and remove tasks
 
-- Na renderização da lista de tarefas, é criado uma div com a classe `buttons-container` dentro de cada `li`;
-- A div `buttons-container` possui 3 botões, `up-btn` `down-btn` e `remove-btn`;
-- O botão `up-btn` move a tarefa para cima, `down-btn` move a tarefa para baixo e `remove-btn` deleta a tarefa;
-- O botão `up-btn` não é renderizado no primeiro elemento da lista e o botão `down-btn` não é renderizado no ultimo elemento da lista;
+<details>
+  <summary>
+    <strong>Tasks can be moved up and down and can be removed</strong>
+  </summary> <br />
 
+- During the rendering of the task list, a div with the class `buttons-container` is created inside each `li`
+
+- The `buttons-container` div contains 3 buttons, `up-btn`, `down-btn`, and `remove-btn`
+
+- The `up-btn` button moves the task upwards, the `down-btn` button moves the task downwards, and the `remove-btn` button deletes the task
+
+- The `up-btn` button is not rendered on the first element of the list, and the `down-btn` button is not rendered on the last element of the list
 </details>
 
 ---
