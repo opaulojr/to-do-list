@@ -4,7 +4,7 @@
 
 ## Link
 
-[to-do-list.vercel](https://paulo-to-do-list.vercel.app/)
+## [to-do-list.vercel](https://paulo-to-do-list.vercel.app/)
 
 ![Preview of To Do List Project](./to-do-list.png)
 
